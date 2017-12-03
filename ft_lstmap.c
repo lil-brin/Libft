@@ -1,27 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmuravio <vmuravio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/18 15:09:03 by vmuravio          #+#    #+#             */
-/*   Updated: 2017/11/30 17:06:57 by vmuravio         ###   ########.fr       */
+/*   Created: 2017/11/26 18:17:39 by vmuravio          #+#    #+#             */
+/*   Updated: 2017/11/26 19:30:40 by vmuravio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strequ(char const *s1, char const *s2)
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	if (!s1 || !s2)
-		return (0);
-	while (*s1 && *s2)
+	t_list *new;
+	t_list *link;
+
+	if (!lst || !f)
+		return (NULL);
+	new = NULL;
+	link = NULL;
+	while (lst)
 	{
-		if (*s1 != *s2)
-			return (0);
-		s1++;
-		s2++;
+		if (new == NULL)
+		{
+			new = f(lst);
+			link = new;
+		}
+		else
+		{
+			link->next = f(lst);
+			link = link->next;
+		}
+		lst = lst->next;
 	}
-	return (*s1 == *s2);
+	return (new);
 }

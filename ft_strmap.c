@@ -6,7 +6,7 @@
 /*   By: vmuravio <vmuravio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/18 14:40:45 by vmuravio          #+#    #+#             */
-/*   Updated: 2017/11/21 17:40:51 by vmuravio         ###   ########.fr       */
+/*   Updated: 2017/11/26 19:31:51 by vmuravio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {
-	char *str;
-	char *tmp;
-	int i;
+	char	*str;
+	char	*tmp;
+	int		i;
 
 	i = 0;
 	if (!s || !f)

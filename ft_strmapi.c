@@ -6,7 +6,7 @@
 /*   By: vmuravio <vmuravio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/18 15:03:09 by vmuravio          #+#    #+#             */
-/*   Updated: 2017/11/21 21:33:14 by vmuravio         ###   ########.fr       */
+/*   Updated: 2017/11/26 19:33:35 by vmuravio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*str;
 	int		i;
-	int 	j;
+	int		j;
 
 	if (!s || !f)
 		return (0);

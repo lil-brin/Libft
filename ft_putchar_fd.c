@@ -6,7 +6,7 @@
 /*   By: vmuravio <vmuravio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/19 22:05:42 by vmuravio          #+#    #+#             */
-/*   Updated: 2017/11/21 16:32:58 by vmuravio         ###   ########.fr       */
+/*   Updated: 2017/11/26 19:32:27 by vmuravio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-	write (fd, &c, 1);
+	write(fd, &c, 1);
 }

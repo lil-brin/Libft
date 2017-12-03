@@ -6,7 +6,7 @@
 /*   By: vmuravio <vmuravio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/18 16:30:52 by vmuravio          #+#    #+#             */
-/*   Updated: 2017/11/21 15:37:48 by vmuravio         ###   ########.fr       */
+/*   Updated: 2017/11/26 19:34:15 by vmuravio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
 	unsigned int	i;
 	char			*str;
-	int 			j;
+	int				j;
 
 	j = 0;
 	i = 0;
@@ -33,5 +33,5 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 		j++;
 	}
 	str[j] = '\0';
-	return(str);
+	return (str);
 }

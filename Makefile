@@ -6,12 +6,14 @@
 #    By: vmuravio <vmuravio@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/12 19:57:38 by vmuravio          #+#    #+#              #
-#    Updated: 2017/11/26 17:51:07 by vmuravio         ###   ########.fr        #
+#    Updated: 2017/12/03 17:45:03 by vmuravio         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
+
 FLAGS = -Wall -Wextra -Werror
+
 SRC = ft_bzero.c \
 ft_isalnum.c \
 ft_isalpha.c \
@@ -68,6 +70,14 @@ ft_lstdel.c \
 ft_lstdelone.c \
 ft_lstnew.c \
 ft_lstadd.c \
+ft_lstiter.c \
+ft_lstmap.c \
+ft_itoa.c \
+ft_words.c \
+ft_pow.c \
+ft_lstlen.c \
+ft_lstaddend.c \
+ft_is_whitespace.c \
 
 OBJECTS = $(SRC:.c=.o)
 
@@ -84,7 +94,8 @@ fclean: clean
 re: fclean all
 
 %.o: %.c
-	gcc $(CFLAGS) -c -o $@ $<
+	gcc $(FLAGS) -c -o $@ $<
+
 .PHONY: all clean fclean re
 
 .NOTPARALLEL: all clean fclean re

@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   ft_lstaddend.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmuravio <vmuravio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/18 15:09:03 by vmuravio          #+#    #+#             */
-/*   Updated: 2017/11/30 17:06:57 by vmuravio         ###   ########.fr       */
+/*   Created: 2017/12/03 16:10:08 by vmuravio          #+#    #+#             */
+/*   Updated: 2017/12/03 17:40:55 by vmuravio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strequ(char const *s1, char const *s2)
+void	ft_lstaddend(t_list **alist, t_list *list)
 {
-	if (!s1 || !s2)
-		return (0);
-	while (*s1 && *s2)
-	{
-		if (*s1 != *s2)
-			return (0);
-		s1++;
-		s2++;
-	}
-	return (*s1 == *s2);
+	if (!alist || !list || !(*alist))
+		return ;
+	while ((*alist)->next != 0)
+		*alist = (*alist)->next;
+	(*alist)->next = list;
 }

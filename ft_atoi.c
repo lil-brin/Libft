@@ -6,19 +6,11 @@
 /*   By: vmuravio <vmuravio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 13:44:58 by vmuravio          #+#    #+#             */
-/*   Updated: 2017/11/21 21:25:21 by vmuravio         ###   ########.fr       */
+/*   Updated: 2017/12/03 17:44:15 by vmuravio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	ft_is_whitespace(char c)
-{
-	if (c == '\t' || c == '\n' || c == '\v' || c == '\f'
-			|| c == '\r' || c == ' ')
-		return (1);
-	return (0);
-}
 
 int			ft_atoi(const char *str)
 {

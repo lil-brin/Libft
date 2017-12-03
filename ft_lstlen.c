@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   ft_lstlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmuravio <vmuravio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/18 15:09:03 by vmuravio          #+#    #+#             */
-/*   Updated: 2017/11/30 17:06:57 by vmuravio         ###   ########.fr       */
+/*   Created: 2017/12/03 15:54:51 by vmuravio          #+#    #+#             */
+/*   Updated: 2017/12/03 17:39:56 by vmuravio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strequ(char const *s1, char const *s2)
+int	ft_lstlen(t_list *list)
 {
-	if (!s1 || !s2)
+	int	i;
+
+	if (!list)
 		return (0);
-	while (*s1 && *s2)
+	i = 0;
+	while (list)
 	{
-		if (*s1 != *s2)
-			return (0);
-		s1++;
-		s2++;
+		list = list->next;
+		i++;
 	}
-	return (*s1 == *s2);
+	return (i);
 }
